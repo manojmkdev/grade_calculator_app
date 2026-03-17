@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grade Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <main class="container">
+
+    <header class="header">
+    
+      <h1 class="title">Grade<br/><span>Calculator</span></h1>
+      <p class="subtitle">Enter marks for each subject to compute your total, average, and final grade.</p>
+    </header>
+
+    <section class="card">
+      <form id="gradeForm" novalidate>
+
+        <div class="subjects-wrapper" id="subjectsWrapper">
+          <!-- Subject rows injected by JS -->
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="addSubjectBtn">+ Add Subject</button>
+          <button type="button" class="btn btn-danger" id="removeSubjectBtn">− Remove</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <button type="submit" class="btn btn-primary" id="calculateBtn">
+          Calculate Grade
+        </button>
+
+      </form>
+    </section>
+
+    <!-- Result Section -->
+    <section class="result-card" id="resultCard" aria-live="polite">
+      <div class="result-header">
+        <span class="result-label">Result</span>
+      </div>
+      <div class="result-grid">
+        <div class="result-item">
+          <span class="result-key">Total</span>
+          <span class="result-val" id="resTotal">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-key">Average</span>
+          <span class="result-val" id="resAvg">—</span>
+        </div>
+        <div class="result-item result-item--grade">
+          <span class="result-key">Grade</span>
+          <span class="result-val grade-badge" id="resGrade">—</span>
+        </div>
+      </div>
+      <p class="result-message" id="resMessage"></p>
+    </section>
+
+  </main>
+
+
+
+  <script src="js/index.js"></script>
+</body>
+</html>
